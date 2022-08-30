@@ -13,6 +13,7 @@ Print victory message
 def run_game():
     welcome()
     battle_phase(characters.hero_goku, characters.enemy_frieza)
+    battle_winner(characters.hero_goku, characters.enemy_frieza)
     # battle_phase(characters.hero_goku, characters.enemy_cell)
     # battle_phase(characters.hero_goku, characters.enemy_kid_buu)
 
@@ -36,3 +37,12 @@ def battle_phase(hero, enemy):
             print(f"{enemy['name']} attacks {hero['name']} using {random_attack[0]} for {random_attack[1]} damage")
             hero['health'] -= random_attack[1]
             print(f"{hero['name']} now has {hero['health']} health.")
+
+def battle_winner(hero, enemy):
+    if hero['health'] > 0:
+        print(f"{hero['name']} defeated {enemy['name']}")
+        print("and took a Senzu Bean to prepare for his next battle!")
+        hero['health'] = 400
+        print(hero['health'])
+    else:
+        print(f"Game Over! {enemy['name']} defeated you.")

@@ -2,7 +2,7 @@
 hero_goku = {
     "name": "Goku",
     "level": 1,
-    "health": 500,
+    "health": 400,
     "equipment": {"Gi", "Power Pole", "Nimbus", "Senzu Beans"},
     "attacks": (("Ki Blast", 25), ("Kamehameha", 50), ("Spirit Bomb", 50)),
     "coins": {
